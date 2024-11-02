@@ -25,3 +25,11 @@ const reducer = userSlice.reducer;
 export default reducer;
 
 export const { userAdd, userReceived } = userSlice.actions;
+
+export const {
+selectAll,
+selectIds,
+selectEntities,
+selectTotal
+  //@ts-ignore
+} = userAdapter.getSelectors((state) => state.users);
